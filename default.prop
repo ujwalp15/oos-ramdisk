@@ -1,22 +1,14 @@
 #
 # ADDITIONAL_DEFAULT_PROPERTIES
 #
-ro.oxygen.version=OP3_O2_Open_24
+ro.oxygen.version=OP3_O2_Open_26
 ro.secure=1
 security.perf_harden=1
 ro.adb.secure=1
 ro.allow.mock.location=0
 ro.debuggable=0
+ro.oem_unlock_supported=true
 ro.zygote=zygote64_32
-pm.dexopt.first-boot=interpret-only
-pm.dexopt.boot=verify-profile
-pm.dexopt.install=interpret-only
-pm.dexopt.bg-dexopt=speed-profile
-pm.dexopt.ab-ota=speed-profile
-pm.dexopt.nsys-library=speed
-pm.dexopt.shared-apk=speed
-pm.dexopt.forced-dexopt=speed
-pm.dexopt.core-app=speed
 dalvik.vm.image-dex2oat-Xms=64m
 dalvik.vm.image-dex2oat-Xmx=64m
 dalvik.vm.dex2oat-Xms=64m
@@ -24,12 +16,21 @@ dalvik.vm.dex2oat-Xmx=512m
 ro.dalvik.vm.native.bridge=0
 dalvik.vm.usejit=true
 dalvik.vm.usejitprofiles=true
+dalvik.vm.dexopt.secondary=true
 dalvik.vm.appimageformat=lz4
+pm.dexopt.first-boot=quicken
+pm.dexopt.boot=verify
+pm.dexopt.install=quicken
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.ab-ota=speed-profile
 debug.atrace.tags.enableflags=0
 ro.logdumpd.enabled=0
+oplib.oneplus_sdk_utils=0.1.2
+oplib.oneplus_sdk_wrapper=0.1.0
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Fri Sep 15 22:55:33 CST 2017
-ro.bootimage.build.date.utc=1505487333
+ro.bootimage.build.date=Thu Oct 26 23:25:09 CST 2017
+ro.bootimage.build.date.utc=1509031509
+ro.bootimage.build.fingerprint=OnePlus/OnePlus3/OnePlus3:8.0.0/OPR6.170623.013/9:user/release-keys
 persist.sys.usb.config=none

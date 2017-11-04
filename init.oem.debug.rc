@@ -32,15 +32,11 @@ on property:persist.sys.assert.enable=true
 
 # There are some duplicate codes
 
-on property:sys.oem.long_pwr_dump=1
-    write /sys/module/qpnp_power_on/parameters/pwr_dump_enabled  1
 
-on property:sys.oem.long_pwr_dump=0
-    write /sys/module/qpnp_power_on/parameters/pwr_dump_enabled  0
 
 on charger
     mount ext4 /dev/block/bootdevice/by-name/cache /cache
-    start charger_logkit
+    #start charger_logkit
 
 on property:persist.oem.dump=1
     write /sys/module/msm_poweroff/parameters/download_mode 1
